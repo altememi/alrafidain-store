@@ -7,7 +7,7 @@ import Heading from "@/app/com/ui/Heading";
 
 const ManageProducts = async () => {
 
-    const products = await getProducts({category: null});
+    const allProducts = await getProducts({category: null});
     const currentUser = await getCurrentUser();
 
     if (!currentUser || currentUser.role !== 'ADMIN') {
@@ -21,7 +21,7 @@ const ManageProducts = async () => {
                                 justify-center items-center mx-auto rounded-t-[1rem]">
                 <Heading title={"Manage All Products"} center />
                 </div>
-               <ManageAllProducts products={products}/>
+               <ManageAllProducts products={allProducts}/>
             </Container>
         </section>
      );

@@ -43,7 +43,7 @@ export default async function getProducts(params: IProductParams) {
         return products;
 
     } catch (error: any) {
-        return NextResponse.json({ error: 'Check your network' }, { status: 500 });
+        throw new Error(error);
 
     }
 }
