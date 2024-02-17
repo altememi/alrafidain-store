@@ -20,13 +20,13 @@ const DashboardNavbar = () => {
                     </Link>
                     <Link href={'/dashboard/add-products'}>
                         <DashboardNavbarItems
-                            label="AddProducts"
+                            label="Add"
                             icon={MdLibraryAdd}
                             selected={pathname === '/dashboard/add-products'} />
                     </Link>
                     <Link href={'/dashboard/manage-products'}>
                         <DashboardNavbarItems
-                            label="ManageProducts"
+                            label="Manage"
                             icon={MdDns}
                             selected={pathname === '/dashboard/manage-products'} />
                     </Link>

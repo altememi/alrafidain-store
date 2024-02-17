@@ -8,8 +8,6 @@ const FormWarp = ({ children }: { children: React.ReactNode }) => {
             justify-center
             py-1">
             <div className="
-                overflow-y-auto
-                h-[40rem]
                 max-w-[650px]
                 w-full
                 flex

@@ -44,7 +44,12 @@ const SignupForm = () => {
                         iconTheme: { primary: '#ff0000', secondary: '#ffffff' },
                     });
                 })
-                .catch(() => { alert('Try again'); })
+                .catch(() => {
+                    toast.error('Please, try again', {
+                        style: { padding: '16px', color: '#000000' },
+                        iconTheme: { primary: '#ff0000', secondary: '#ffffff' },
+                    });
+                })
                 .finally(() => { setIsLoading(false); })
         });
     };
@@ -53,7 +58,6 @@ const SignupForm = () => {
         <>
             <Logo src={"/logo-ruc.png"} alt={"logo"} />
             <Heading title={"Sign up for Rafidain Shop"} />
-            <hr className="bg-slate-300 w-full h-px" />
             <Input
                 id="name"
                 label="Name"
@@ -80,7 +84,7 @@ const SignupForm = () => {
 
             <p className="text-sm">
                 Already have an account? {" "}
-                <Link href={'/signin'} className="underline">
+                <Link href={'/signin'} className="underline font-semibold">
                     Login
                 </Link>
             </p>

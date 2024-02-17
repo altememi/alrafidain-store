@@ -1,4 +1,5 @@
 import prisma from '@/lib/prismaDB'
+import { NextResponse } from 'next/server';
 
 
 
@@ -7,7 +8,7 @@ export interface IProductParams {
     searchTerm?: string | null,
 }
 
-export default async function getProducts(params: IProductParams){
+export default async function getProducts(params: IProductParams) {
     try {
         const { category, searchTerm } = params;
         let searchString = searchTerm;
@@ -23,7 +24,7 @@ export default async function getProducts(params: IProductParams){
                 ...query,
                 OR: [
                     {
-                        name: { contains: searchString, mode: 'insensitive'},
+                        name: { contains: searchString, mode: 'insensitive' },
                         description: { contains: searchString, mode: 'insensitive' }
                     }
                 ]
@@ -42,7 +43,7 @@ export default async function getProducts(params: IProductParams){
         return products;
 
     } catch (error: any) {
-        throw new Error(error);
-        
+        return NextResponse.json({ error: 'Check your network' }, { status: 500 });
+
     }
 }

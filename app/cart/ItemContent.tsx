@@ -29,7 +29,7 @@ const ItemContent: React.FC<ItemContentProp> = ({ item }) => {
                 <div className="flex flex-col justify-between">
                     <Link href={''}>
                         {TruncateText(item.name)}
-                        <div className="pt-3">{item.selectedImage.color}</div>
+                        {/* <div className="pt-3">{item.selectedImage.color}</div> */}
                     </Link>
                 </div>
             </div>

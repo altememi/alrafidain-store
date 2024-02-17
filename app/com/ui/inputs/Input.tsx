@@ -11,10 +11,11 @@ interface InputProps {
     disabled?: boolean,
     required?: boolean,
     register: UseFormRegister<FieldValues>,
-    errors: FieldErrors
+    errors: FieldErrors,
+    placeholder?: string,
 }
 
-const Input: React.FC<InputProps> = ({min, id, label, type, disabled, required, register, errors}) => {
+const Input: React.FC<InputProps> = ({min, id, label, type, disabled, required, register, errors, placeholder}) => {
     return ( 
         <section className="w-full relative">
             <input
@@ -23,7 +24,7 @@ const Input: React.FC<InputProps> = ({min, id, label, type, disabled, required, 
                 id={id}
                 disabled={disabled}
                 {...register(id, {required})}
-                placeholder=""
+                placeholder={placeholder}
                 type={type}
                 className={`
                     peer

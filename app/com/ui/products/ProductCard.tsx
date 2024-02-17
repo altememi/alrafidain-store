@@ -49,19 +49,18 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
                     <Image
                         className="
                             w-full
-                            object-contain"
+                            object-fit"
                         priority
                         fill
                         src={data.images[0].image}
                         alt={data.name} />
                 </div>
-                <div>{TruncateText(data.name)}</div>
+                <div className="text-md font-semibold">{TruncateText(data.name)}</div>
                 <div><Rating value={ProductRating} readOnly /></div>
-                <div>{data.reviews.length} reviews</div>
-                <div
-                    className="
-                        font-semibold">
-                    {FormatPrice(data.price)}</div>
+                <div className="flex items-center justify-between gap-5">
+                    <div className="font-medium">{FormatPrice(data.price)}</div>
+                    <div>{data.reviews.length} views</div>
+                </div>
             </div>
         </section>
     );

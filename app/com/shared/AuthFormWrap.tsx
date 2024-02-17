@@ -12,7 +12,7 @@ const AuthFormWarp = ({ children }: { children: React.ReactNode }) => {
                 absolute
                 top-1/4
                 transform translate-y-1/4
-                max-w-[650px]
+                max-w-[600px]
                 w-full
                 flex
                 flex-col

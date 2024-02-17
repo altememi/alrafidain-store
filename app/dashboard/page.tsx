@@ -1,8 +1,17 @@
+import Container from "../com/shared/Container";
+import FormWarp from "../com/shared/FormWrap";
+import NullData from "../com/ui/NullSata";
 
 const Dashboard = () => {
     return (
         <section className="min-h-screen">
-            hello admin
+            <Container>
+                <FormWarp>
+                    <div>
+                        <NullData text={"AS SOON..."}/>
+                    </div>
+                </FormWarp>
+            </Container>
         </section>
     );
 }

@@ -108,11 +108,11 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
                     <span>{product.category}</span>
                 </div>
 
-                <LineHorizontal />
+                {/* <LineHorizontal />
                 <div className="flex gap-5 items-center">
                     <span className="font-semibold">BRAND</span>
                     <span>{product.brand}</span>
-                </div>
+                </div> */}
                 <LineHorizontal />
                 <div className="flex gap-5 items-center">
                     <span className="font-semibold">IN STOCK</span>
@@ -138,8 +138,8 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
 
                         </> :
                         <>
-                            <SetColor cartProduct={cartProduct} images={product.images} handleColorSelect={handleColorSelect} />
-                            <LineHorizontal />
+                            {/* <SetColor cartProduct={cartProduct} images={product.images} handleColorSelect={handleColorSelect} /> */}
+                            {/* <LineHorizontal /> */}
                             <SetQuantity cartProduct={cartProduct} handleQuantityDecrease={handleQuantityDecrease} handleQuantityIncrease={handleQuantityIncrease} />
                             <LineHorizontal />
                             <Button

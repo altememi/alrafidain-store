@@ -15,7 +15,8 @@ const AddProducts = async () => {
     return (
         <section className="">
             <Container>
-                <div className="sticky p-5 border-b-[.5px] border-slate-200 max-w-[650px] flex flex-col justify-center items-center mx-auto rounded-t-[1rem]">
+                <div className="sticky p-5 border-b-[.5px] border-slate-200 max-w-[650px] flex flex-col 
+                                justify-center items-center mx-auto rounded-t-[1rem]">
                 <Heading title={"Add A New Product"} center />
                 </div>
                 <FormWarp>

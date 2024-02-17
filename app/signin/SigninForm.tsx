@@ -66,7 +66,6 @@ const SigninForm: React.FC<SigninFormProps> = ({ currentUser }) => {
         <>
             <Logo src={'/logo-ruc.png'} alt={"logo"} />
             <Heading title={"Sign up for Rafidain Shop"} />
-            <hr className="bg-slate-300 w-full h-px" />
             <Input
                 id="email"
                 label="Email"
@@ -88,7 +87,7 @@ const SigninForm: React.FC<SigninFormProps> = ({ currentUser }) => {
 
             <p className="text-sm">
                 Do not have an account? {" "}
-                <Link href={'/signup'} className="underline">
+                <Link href={'/signup'} className="underline font-semibold">
                     Register
                 </Link>
             </p>

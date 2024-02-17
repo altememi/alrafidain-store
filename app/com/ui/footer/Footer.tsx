@@ -11,7 +11,7 @@ const Footer = () => {
             <Container>
                 <div className="flex flex-col md:flex-row justify-between py-8">
                     <FooterList>
-                        <h3 className="text-zinc-300 text-base font-bold mb-2">Rafidain Store Categories</h3>
+                        <h3 className="text-zinc-300 text-base font-bold mb-2">Rafidain Shop Categories</h3>
                         <Link href={'/'}>Phones</Link>
                         <Link href={'/'}>Laptops</Link>
                         <Link href={'/'}>Desktops</Link>
@@ -19,13 +19,13 @@ const Footer = () => {
                         <Link href={'/'}>TVS</Link>
                     </FooterList>
                     <FooterList>
-                        <h3 className="text-zinc-300 text-base font-bold mb-2">Rafidain Store Services</h3>
+                        <h3 className="text-zinc-300 text-base font-bold mb-2">Rafidain Shop Services</h3>
                         <Link href={'/'}>Rafidain Store Policy</Link>
                         <Link href={'/'}>FAQs</Link>
                         <Link href={'/'}>Contact us</Link>
                     </FooterList>
                     <div className="w-full md:w-1/3 mb-5 md:mb-0 px-5">
-                        <h3 className="text-zinc-300 text-base font-bold mb-4">About Rafidain Store</h3>
+                        <h3 className="text-zinc-300 text-base font-bold mb-4">About Rafidain Shop</h3>
                         <div className="flex flex-col gap-3">
                             <p>
                                 Concur Electric Co.
@@ -38,7 +38,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <FooterList>
-                        <h3 className="text-zinc-300 text-base font-bold mb-2">Rafidain Store Social Media</h3>
+                        <h3 className="text-zinc-300 text-base font-bold mb-2">Rafidain Shop Social Media</h3>
                         <Link href={'/'} className="flex items-center gap-2"><MdFacebook size={20} />Facebook</Link>
                         <Link href={'/'} className="flex items-center gap-2"><AiFillTwitterCircle size={20} />Twitter</Link>
                         <Link href={'/'} className="flex items-center gap-2"><AiFillYoutube size={20} />Youtube</Link>

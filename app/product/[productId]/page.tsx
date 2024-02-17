@@ -18,10 +18,10 @@ const Product = async ( {params} : { params: IParams}) => {
         <section className="p-8">
             <Container>
                 <ProductDetails product={product} />
-                <div className="flex flex-col mt-20 gap-5">
+                {/* <div className="flex flex-col mt-20 gap-5">
                     <div>Add Rating</div>
                     <ListRating product={product}/>
-                </div>
+                </div> */}
             </Container>
         </section>
      );

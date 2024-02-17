@@ -224,8 +224,8 @@ const AddProductsForm = () => {
 
             <div className="w-full flex flex-col flex-wrap py-10 border-y-[1px] mt-10">
                 <div>
-                    <h5 className="font-semibold">Select color of product then upload image</h5>
-                    <p className="font-medium text-sm">You must upkoad image for each color selected</p>
+                    <h5 className="font-semibold">Select box of product then upload image</h5>
+                    <p className="font-medium text-sm">You must upload one image for each box selected.</p>
                 </div>
             </div>
 
