@@ -3,9 +3,9 @@ import { useCart } from "@/hook/useCart";
 import Link from "next/link";
 import { MdArrowBack } from "react-icons/md";
 import Headinig from "../com/ui/Heading";
-import { TruncateText } from "@/utils/truncateText/page";
 import Button from "../com/ui/Button";
 import ItemContent from "./ItemContent";
+import { FormatPrice } from "@/utils/formatPrice/page";
 
 const LineHorizontal = () => { return <hr className="w-[100%] my-5" />; }
 
@@ -43,22 +43,20 @@ const CartClient = () => {
                         <div className="text-sm font-semibold justify-self-center">TOTAL</div>
                         <div className="text-sm font-semibold justify-self-end">OPERATIONS</div>
                     </div>
-                        {
-                            cartProducts && cartProducts.map((item) => {
-                                return <ItemContent key={item.id} item={item}/>
-                            })
-                        }
+                    {
+                        cartProducts && cartProducts.map((item) => {
+                            return <ItemContent key={item.id} item={item} />
+                        })
+                    }
                 </div>
                 <div className="w-full h-[.5px] lg:h-[80px] lg:w-[.5px] bg-slate-300"></div>
                 {/* right */}
                 <div className="flex justify-between w-full basis-2/4 md:basis-2/5">
                     <div className="flex flex-col gap-5">
-                        <span className="text-sm font-semibold">TOTAL</span>
                         <span className="text-sm font-semibold">SUBTOTAL</span>
                     </div>
                     <div className="flex flex-col gap-5">
-                        <span className="text-sm font-semibold">$1000</span>
-                        <span className="text-sm font-semibold">$130</span>
+                        <span className="text-sm font-semibold">{'$3,996.00'}</span>
                     </div>
                 </div>
             </div>
@@ -69,9 +67,11 @@ const CartClient = () => {
                     <Button outline small custom="w-[6rem] bg-rose-400 border-none text-white" label={"Clear A Cart"} onClick={() => { }} />
                 </div>
                 <div>
-                    <Button small custom="w-[200px]" onClick={() => { }} label={"Checkout"} />
+                    <Link href={'/success'}>
+                        <Button small custom="w-[200px]" onClick={() => { }} label={"Checkout"} />
+                    </Link>
                     <div className="flex items-center py-1 gap-1 text-slate-500">
-                        <MdArrowBack size={20} className="pt-1"/>
+                        <MdArrowBack size={20} className="pt-1" />
                         <span>continue shopping</span>
                     </div>
                 </div>

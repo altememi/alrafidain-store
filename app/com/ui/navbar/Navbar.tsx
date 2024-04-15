@@ -3,7 +3,7 @@ import Container from "../../shared/Container";
 import Image from "next/image";
 import UserMenu from "./UserMenu";
 import { getCurrentUser } from "@/action/GetCurrentUser";
-import { GrCart } from "react-icons/gr";
+import CartQuantity from "./CartQuantity";
 
 
 const Navbar = async () => {
@@ -22,16 +22,7 @@ const Navbar = async () => {
                             </div>
                         </Link>
                         <div className="flex items-center gap-8 md:gap-12">
-                            {/* <div className="hidden md:block">Search</div> */}
-                            <div className="relative flex text-lg ">
-                                <GrCart />
-                                <span className="
-                                            w-5 h-5 flex items-center justify-center
-                                            absolute top-[-10px] right-[-15px] 
-                                            text-sm text-white bg-sky-600 rounded-full ">
-                                    1
-                                </span>
-                            </div>
+                            <CartQuantity/>
                             <UserMenu currentUser={user} />
                         </div>
                     </div>

@@ -2,7 +2,6 @@
 
 import Button from "@/app/com/ui/Button";
 import ProductImage from "@/app/com/ui/products/ProductImage";
-import SetColor from "@/app/com/ui/products/SetColor";
 import SetQuantity from "@/app/com/ui/products/SetQuantity";
 import { useCart } from "@/hook/useCart";
 import { Rating } from "@mui/material";
@@ -22,7 +21,8 @@ export type CartProductType = {
     brand: string,
     selectedImage: SelectedImageType,
     quantity: number,
-    price: number
+    price: number,
+    total: number
 }
 export type SelectedImageType = {
     color: string,
@@ -48,7 +48,8 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
             brand: product.brand,
             selectedImage: { ...product.images[0] },
             quantity: 1,
-            price: product.price
+            price: product.price,
+            total: product.total
         }
     );
 
@@ -107,12 +108,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
                     <span className="font-semibold">CATEGORY</span>
                     <span>{product.category}</span>
                 </div>
-
-                {/* <LineHorizontal />
-                <div className="flex gap-5 items-center">
-                    <span className="font-semibold">BRAND</span>
-                    <span>{product.brand}</span>
-                </div> */}
                 <LineHorizontal />
                 <div className="flex gap-5 items-center">
                     <span className="font-semibold">IN STOCK</span>
@@ -138,8 +133,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
 
                         </> :
                         <>
-                            {/* <SetColor cartProduct={cartProduct} images={product.images} handleColorSelect={handleColorSelect} /> */}
-                            {/* <LineHorizontal /> */}
                             <SetQuantity cartProduct={cartProduct} handleQuantityDecrease={handleQuantityDecrease} handleQuantityIncrease={handleQuantityIncrease} />
                             <LineHorizontal />
                             <Button

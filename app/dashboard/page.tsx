@@ -1,15 +1,15 @@
+import getProducts from "@/action/GetProducts";
 import Container from "../com/shared/Container";
 import FormWarp from "../com/shared/FormWrap";
-import NullData from "../com/ui/NullSata";
+import Home from "./home";
 
-const Dashboard = () => {
+const Dashboard = async () => {
+
     return (
         <section className="min-h-screen">
             <Container>
                 <FormWarp>
-                    <div>
-                        <NullData text={"AS SOON..."}/>
-                    </div>
+                        <Home />
                 </FormWarp>
             </Container>
         </section>
