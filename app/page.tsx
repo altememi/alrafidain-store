@@ -4,6 +4,7 @@ import Footer from "./com/ui/footer/Footer";
 import NavbarHome from "./com/ui/home/navbar/NavbarHome";
 import TitleHome from "./com/ui/home/header/TitleHome";
 import ContentsHome from "./com/ui/home/content/ContentsHome";
+import Slider from "./com/ui/home/slider/Slider";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <TitleHome />
       <Container>
         <ContentsHome />
+        <Slider/>
       </Container>
       <Footer />
     </>
